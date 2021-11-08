@@ -1,9 +1,7 @@
 % CROADS 
 % this is the carbon and temperature part of C-ROADS. 
-% emissions are prescribed by the user. hint: currently, emissions are
+% emissions are prescribed by the user. currently, emissions are
 % around 10Gt(C) [Gigaton of carbon] per year. 
-
-%
 
 close all; %kill all previous plots
 clear all; %delete all previous variables
@@ -112,7 +110,6 @@ seasurf = 0.708;            % fraction of earth's surface that is sea
 heatcap = 4.23e6;           % J/K m^3. heat capacity of water
 secyr = 365.25*24*3600;     % seconds per year 
 
-
 %--------------------------- define variables ---------------------------%
 
 Cat = zeros(nt,1);      % total atmospheric carbon , in Gt(C)
@@ -135,7 +132,6 @@ T = Cat;        % global surface warming in K
 Tequil = Cat;   % surf. temp. that would be in equilibrium with the current atm. carbon. not needed, but nice to plot.
 FCO2 = Cat;     % forcing from CO2
 Fout = Cat;     % longwave forcing due to warming
-
 
 %----------------- initialisation, external time series -----------------%
 % Cat, Con, humm, biom, T   (NPP... not needed)
@@ -351,7 +347,6 @@ end %time steps
     
     axis([2000 2100 0 6])
 
-
 %Tfinal(l) = Tequil(10000);
 
 end
@@ -361,8 +356,6 @@ plot(timvec,two,'k--','Linewidth',1.5);
 
 %histogram(Ton(:,1))
 % Tav = sum(Tfinal)/500
-
-% 
 % 
 % %a few auxiliary variables are not computed in the first time step. for
 % %plotting purposes, set these to second timestep.
