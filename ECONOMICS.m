@@ -11,7 +11,6 @@ yr2 = 350;              % last year
 timvec = yr1:dt:yr2;    % time vector 
 nt = length(timvec);    % nr of time steps (which are years)
 
-
 %------------------ list of variables -----------------%
 
 % *A(t) % economic efficiency or "total factor productivity"
@@ -55,8 +54,6 @@ rho0 = 0.03;        % init. rate of pure time preference rho
 % x_i = length(size);
 %  
 % for x=0:0.05:10;
-
-
 
 %------------------------ initialization values ------------------------%
 
@@ -136,7 +133,6 @@ for t=2:nt;
 
     w(t) = L(t)*log(c(t)*(1e6))*R(t);
     
-    
 end
 
 dQ = diff(Q);
@@ -184,7 +180,6 @@ title('Economic Growth')
 xlabel('time [years since 1995]')
 ylabel('G')
 
-
 % figure(2)
 % plot(timvec(2:349),G(2:349),'Linewidth',2.5)
 % title('Economic Growth')
@@ -210,10 +205,6 @@ ylabel('G')
 % title('Accumulated Welfare function vs X')
 % xlabel('X')
 % ylabel('W')
-
-
-
-
 
 % [val, idx] = max(W);
 % hold on
